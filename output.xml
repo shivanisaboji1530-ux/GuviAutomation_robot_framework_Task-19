@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-06-21T15:54:02.653286" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\shiva\PycharmProjects\RobotFramework\tests\login_test.robot">
+<kw name="Open Application" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:03.003651" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-21T15:54:03.003376" elapsed="2.414030"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-21T15:54:05.417765" elapsed="0.039920"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:03.002724" elapsed="2.455246"/>
+</kw>
+<test id="s1-t1" name="Verify User Login Functionality" line="9">
+<kw name="Login To Application" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:05.463582" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-21T15:54:05.462668" elapsed="0.254588"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:05.717922" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-06-21T15:54:05.760462" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-21T15:54:05.717573" elapsed="0.119727"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:05.837961" level="INFO">Clicking button 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>xpath://button[contains(text(),'Log in')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-21T15:54:05.837563" elapsed="0.123887"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:06.140012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="after_login.png"&gt;&lt;img src="after_login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>after_login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-21T15:54:05.962055" elapsed="0.178307"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:05.461679" elapsed="0.679072"/>
+</kw>
+<kw name="Verify Successful Login" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://button[contains(text(),'Log out')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-21T15:54:06.142251" elapsed="0.241309"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:06.141577" elapsed="0.242098"/>
+</kw>
+<kw name="Logout From Application" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:06.384472" level="INFO">Clicking button 'xpath://button[contains(text(),'Log out')]'.</msg>
+<arg>xpath://button[contains(text(),'Log out')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-21T15:54:06.384279" elapsed="0.094076"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-21T15:54:06.727679" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logout.png"&gt;&lt;img src="logout.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>logout.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-21T15:54:06.478547" elapsed="0.249263"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:06.384028" elapsed="0.343928"/>
+</kw>
+<doc>Verify user can login and logout successfully</doc>
+<status status="PASS" start="2026-06-21T15:54:05.458220" elapsed="1.270077"/>
+</test>
+<kw name="Close Application" owner="keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-21T15:54:06.730023" elapsed="2.282698"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:06.729621" elapsed="2.283236"/>
+</kw>
+<status status="PASS" start="2026-06-21T15:54:02.655588" elapsed="6.357326"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
